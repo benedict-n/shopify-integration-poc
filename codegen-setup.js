@@ -1,5 +1,7 @@
 const fs = require("fs");
 var request = require("request");
+
+// derived from network request within: https://shopify.dev/apps/tools/graphiql-admin-api
 var options = {
   method: "POST",
   url: "https://shopify.dev/admin-graphql-proxy",
