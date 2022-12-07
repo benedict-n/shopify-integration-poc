@@ -1,8 +1,8 @@
 const fs = require("fs");
-var request = require("request");
+const request = require("request");
 
 // derived from network request within: https://shopify.dev/apps/tools/graphiql-admin-api
-var options = {
+const options = {
   method: "POST",
   url: "https://shopify.dev/admin-graphql-proxy",
   headers: {
@@ -16,6 +16,7 @@ var options = {
     version: "2022-10",
   }),
 };
+
 request(options, function (error, response) {
   if (error) throw new Error(error);
   fs.writeFileSync("./shopify.json", response.body);
