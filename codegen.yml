@@ -1,0 +1,8 @@
+schema: ./shopify.json
+documents: query.graphql
+generates:
+  ./src/generated/generated-stuff.ts:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-graphql-request"
